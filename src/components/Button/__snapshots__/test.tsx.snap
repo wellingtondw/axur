@@ -5,7 +5,7 @@ exports[`<Button /> should render correctly in the document 1`] = `
   border: none;
   background: #ff5824;
   color: #fff;
-  padding: 4px 12px;
+  padding: 8px 16px;
   border-radius: 4px;
   -webkit-transition: background-color linear 0.2s;
   transition: background-color linear 0.2s;

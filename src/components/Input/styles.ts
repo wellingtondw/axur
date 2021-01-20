@@ -9,6 +9,7 @@ export const Container = styled.div<ContainerProps>`
   display: flex;
   flex: 1;
   border-bottom: 1px solid #ddd;
+  width: 100%;
 
   ${({ isFocused }) =>
     isFocused &&

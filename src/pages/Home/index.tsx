@@ -12,6 +12,8 @@ const Home: React.FC = () => {
 
   return (
     <S.HeaderContainer>
+      <S.Logo>Axur</S.Logo>
+      <S.Description>Ferramenta para automação de busca</S.Description>
       <S.Wrapper>
         <Input
           placeholder="Digite o termo para ser inspecionado"
