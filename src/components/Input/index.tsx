@@ -1,10 +1,30 @@
-import React from 'react';
+import React, { InputHTMLAttributes, useState, useCallback } from 'react';
 import * as S from './styles';
 
-const Input = () => {
+type InputProps = InputHTMLAttributes<HTMLInputElement>;
+
+const Input: React.FC<InputProps> = ({ value, ...rest }) => {
+  const [isFocused, setIsFocused] = useState(false);
+  const [isFilled, setIsFilled] = useState(false);
+
+  const handleInputFocus = useCallback(() => {
+    setIsFocused(true);
+  }, []);
+
+  const handleInputBlur = useCallback(() => {
+    setIsFocused(false);
+
+    setIsFilled(!!value);
+  }, [value]);
+
   return (
-    <S.Container>
-      <S.Input />
+    <S.Container isFocused={isFocused} isFilled={isFilled}>
+      <S.Input
+        {...rest}
+        onFocus={handleInputFocus}
+        onBlur={handleInputBlur}
+        value={value}
+      />
     </S.Container>
   );
 };

@@ -1,8 +1,26 @@
-import React from 'react';
+import React, { useCallback, useState } from 'react';
 import * as S from './styles';
 
-const Home = () => {
-  return <S.Container>Home</S.Container>;
+import Input from '../../components/Input';
+
+const Home: React.FC = () => {
+  const [inputValue, setInputValue] = useState('');
+
+  const handleInputChange = useCallback(e => {
+    setInputValue(e.target.value);
+  }, []);
+
+  return (
+    <S.HeaderContainer>
+      <S.Wrapper>
+        <Input
+          placeholder="Digite o termo para ser inspecionado"
+          onChange={e => handleInputChange(e)}
+          value={inputValue}
+        />
+      </S.Wrapper>
+    </S.HeaderContainer>
+  );
 };
 
 export default Home;
