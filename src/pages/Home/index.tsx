@@ -17,7 +17,9 @@ const Home: React.FC = () => {
           placeholder="Digite o termo para ser inspecionado"
           onChange={e => handleInputChange(e)}
           value={inputValue}
+          inputContainerStyle={{ maxWidth: 460 }}
         />
+        <S.Button>Cadastrar</S.Button>
       </S.Wrapper>
     </S.HeaderContainer>
   );

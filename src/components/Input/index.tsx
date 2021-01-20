@@ -1,9 +1,15 @@
 import React, { InputHTMLAttributes, useState, useCallback } from 'react';
 import * as S from './styles';
 
-type InputProps = InputHTMLAttributes<HTMLInputElement>;
+type InputProps = {
+  inputContainerStyle?: object;
+} & InputHTMLAttributes<HTMLInputElement>;
 
-const Input: React.FC<InputProps> = ({ value, ...rest }) => {
+const Input: React.FC<InputProps> = ({
+  value,
+  inputContainerStyle,
+  ...rest
+}) => {
   const [isFocused, setIsFocused] = useState(false);
   const [isFilled, setIsFilled] = useState(false);
 
@@ -22,6 +28,7 @@ const Input: React.FC<InputProps> = ({ value, ...rest }) => {
       isFocused={isFocused}
       isFilled={isFilled}
       data-testid="input-container"
+      style={inputContainerStyle}
     >
       <S.Input
         {...rest}
