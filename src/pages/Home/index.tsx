@@ -19,7 +19,7 @@ const Home: React.FC = () => {
           value={inputValue}
           inputContainerStyle={{ maxWidth: 460 }}
         />
-        <S.Button>Cadastrar</S.Button>
+        <S.Button title="Cadastrar novo termo">Cadastrar</S.Button>
       </S.Wrapper>
     </S.HeaderContainer>
   );
