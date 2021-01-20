@@ -10,6 +10,13 @@ module.exports = {
         {
           'regenerator': true
         }
+      ],
+      [
+        'babel-plugin-styled-components',
+        {
+          'displayName': true,
+          'ssr': false
+        }
       ]
     ]
 }

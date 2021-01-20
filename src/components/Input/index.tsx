@@ -18,7 +18,11 @@ const Input: React.FC<InputProps> = ({ value, ...rest }) => {
   }, [value]);
 
   return (
-    <S.Container isFocused={isFocused} isFilled={isFilled}>
+    <S.Container
+      isFocused={isFocused}
+      isFilled={isFilled}
+      data-testid="input-container"
+    >
       <S.Input
         {...rest}
         onFocus={handleInputFocus}
