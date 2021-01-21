@@ -3,6 +3,7 @@ import * as S from './styles';
 
 import Input from '../../components/Input';
 import ContentBox from '../../components/ContentBox';
+import LinkItem from '../../components/LinkItem';
 
 const Home: React.FC = () => {
   const [inputValue, setInputValue] = useState('');
@@ -27,7 +28,13 @@ const Home: React.FC = () => {
         </S.Wrapper>
       </S.HeaderContainer>
       <S.MainContainer>
-        <ContentBox title="Termos cadastrados" />
+        <ContentBox title="Termos cadastrados">
+          <S.Wrapper style={{ marginTop: 32, flexDirection: 'column' }}>
+            <LinkItem text="asddsad" />
+            <LinkItem text="asddsad" />
+            <LinkItem text="asddsad" />
+          </S.Wrapper>
+        </ContentBox>
       </S.MainContainer>
     </S.Container>
   );

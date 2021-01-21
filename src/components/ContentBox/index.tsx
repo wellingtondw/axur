@@ -1,7 +1,7 @@
 import React from 'react';
 import * as S from './styles';
 
-type ContentBoxProps = {
+export type ContentBoxProps = {
   title: string;
 };
 
