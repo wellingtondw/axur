@@ -11,19 +11,22 @@ const Home: React.FC = () => {
   }, []);
 
   return (
-    <S.HeaderContainer>
-      <S.Logo>Axur</S.Logo>
-      <S.Description>Ferramenta para automação de busca</S.Description>
-      <S.Wrapper>
-        <Input
-          placeholder="Digite o termo para ser inspecionado"
-          onChange={e => handleInputChange(e)}
-          value={inputValue}
-          inputContainerStyle={{ maxWidth: 460 }}
-        />
-        <S.Button title="Cadastrar novo termo">Cadastrar</S.Button>
-      </S.Wrapper>
-    </S.HeaderContainer>
+    <S.Container>
+      <S.HeaderContainer>
+        <S.Logo>Axur</S.Logo>
+        <S.Description>Ferramenta para automação de busca</S.Description>
+        <S.Wrapper>
+          <Input
+            placeholder="Digite o termo para ser inspecionado"
+            onChange={e => handleInputChange(e)}
+            value={inputValue}
+            inputContainerStyle={{ maxWidth: 460 }}
+          />
+          <S.Button title="Cadastrar novo termo">Cadastrar</S.Button>
+        </S.Wrapper>
+      </S.HeaderContainer>
+      <S.MainContainer />
+    </S.Container>
   );
 };
 
