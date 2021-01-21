@@ -29,11 +29,23 @@ const Home: React.FC = () => {
       </S.HeaderContainer>
       <S.MainContainer>
         <ContentBox title="Termos cadastrados">
-          <S.Wrapper style={{ marginTop: 32, flexDirection: 'column' }}>
+          <S.WrapperItems>
             <LinkItem text="asddsad" />
             <LinkItem text="asddsad" />
             <LinkItem text="asddsad" />
-          </S.Wrapper>
+            <LinkItem text="asddsad" />
+            <LinkItem text="asddsad" />
+            <LinkItem text="asddsad" />
+            <LinkItem text="asddsad" />
+            <LinkItem text="asddsad" />
+            <LinkItem text="asddsad" />
+            <LinkItem text="asddsad" />
+            <LinkItem text="asddsad" />
+            <LinkItem text="asddsad" />
+            <LinkItem text="asddsad" />
+            <LinkItem text="asddsad" />
+            <LinkItem text="asddsad" />
+          </S.WrapperItems>
         </ContentBox>
       </S.MainContainer>
     </S.Container>

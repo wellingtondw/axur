@@ -5,16 +5,20 @@ exports[`<ContentBox /> should render correctly in the document 1`] = `
   width: 100%;
   max-width: 324px;
   border: 1px solid #ddd;
-  height: 360px;
+  height: 374px;
   overflow-y: auto;
   border-radius: 4px;
+}
+
+.c0::-webkit-scrollbar {
+  display: none;
 }
 
 .c1 {
   font-size: 20px;
   font-weight: bold;
   color: #222;
-  margin: 16px 0 0 8px;
+  margin: 16px 0 32px 8px;
 }
 
 <div
