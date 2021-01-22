@@ -1,21 +1,38 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
-export const Container = styled.div`
-  width: 100%;
-  max-width: 324px;
-  border: 1px solid #ddd;
-  height: 374px;
-  overflow-y: auto;
-  border-radius: 4px;
+type StylesProps = {
+  theme: 'primary' | 'secondary';
+};
 
-  &::-webkit-scrollbar {
-    display: none;
-  }
+const contentBoxModifiers = {
+  primary: css`
+    background: #fff;
+    color: #222;
+  `,
+  secondary: css`
+    background: #222;
+    color: #ddd;
+  `,
+};
+
+export const Container = styled.div<StylesProps>`
+  ${({ theme }) => css`
+    width: 100%;
+    border: 1px solid #ddd;
+    height: 374px;
+    overflow-y: auto;
+    border-radius: 4px;
+
+    ${theme && contentBoxModifiers[theme]};
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  `}
 `;
 
-export const Title = styled.h2`
+export const Title = styled.h2<StylesProps>`
   font-size: 20px;
   font-weight: bold;
-  color: #222;
-  margin: 16px 0 32px 8px;
+  margin: 16px 0 32px 16px;
 `;

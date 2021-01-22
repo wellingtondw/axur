@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 
 import Btn from '../../components/Button';
+import CtBox from '../../components/ContentBox';
 
 export const Container = styled.div`
   display: flex;
@@ -55,6 +56,8 @@ export const MainContainer = styled.div`
   width: 100%;
   max-width: 1280px;
   margin-top: 40px;
+  display: flex;
+  align-items: center;
 `;
 
 export const WrapperItems = styled.div`
@@ -63,4 +66,8 @@ export const WrapperItems = styled.div`
   a:last-of-type {
     border: none;
   }
+`;
+
+export const ContentBox = styled(CtBox)`
+  margin-left: 40px;
 `;

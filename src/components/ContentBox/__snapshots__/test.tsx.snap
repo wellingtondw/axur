@@ -3,11 +3,12 @@
 exports[`<ContentBox /> should render correctly in the document 1`] = `
 .c0 {
   width: 100%;
-  max-width: 324px;
   border: 1px solid #ddd;
   height: 374px;
   overflow-y: auto;
   border-radius: 4px;
+  background: #fff;
+  color: #222;
 }
 
 .c0::-webkit-scrollbar {
@@ -17,12 +18,12 @@ exports[`<ContentBox /> should render correctly in the document 1`] = `
 .c1 {
   font-size: 20px;
   font-weight: bold;
-  color: #222;
-  margin: 16px 0 32px 8px;
+  margin: 16px 0 32px 16px;
 }
 
 <div
   class="c0"
+  data-testid="content-box-container"
 >
   <h2
     class="c1"

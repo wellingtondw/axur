@@ -28,7 +28,7 @@ const Home: React.FC = () => {
         </S.Wrapper>
       </S.HeaderContainer>
       <S.MainContainer>
-        <ContentBox title="Termos cadastrados">
+        <ContentBox title="Termos cadastrados" style={{ maxWidth: 310 }}>
           <S.WrapperItems>
             <LinkItem text="asddsad" />
             <LinkItem text="asddsad" />
@@ -47,6 +47,10 @@ const Home: React.FC = () => {
             <LinkItem text="asddsad" />
           </S.WrapperItems>
         </ContentBox>
+        <S.ContentBox title="Lorem #30vbllyb" theme="secondary">
+          <LinkItem text="asddsad" theme="secondary" />
+          <LinkItem text="asddsad" theme="secondary" />
+        </S.ContentBox>
       </S.MainContainer>
     </S.Container>
   );

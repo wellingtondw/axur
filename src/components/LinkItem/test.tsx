@@ -16,4 +16,20 @@ describe('<LinkItem />', () => {
       screen.getByRole('link', { name: /same text/i }),
     ).toBeInTheDocument();
   });
+
+  it('should render with black color if the theme is primary', () => {
+    render(<LinkItem text="Same text" />);
+
+    expect(screen.getByRole('link', { name: /same text/i })).toHaveStyle(
+      'color: #222',
+    );
+  });
+
+  it('should render with black color if the theme is secondary', () => {
+    render(<LinkItem text="Same text" theme="secondary" />);
+
+    expect(screen.getByRole('link', { name: /same text/i })).toHaveStyle(
+      'color: #ddd',
+    );
+  });
 });

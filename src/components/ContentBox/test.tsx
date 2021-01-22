@@ -16,4 +16,22 @@ describe('<ContentBox />', () => {
       screen.getByRole('heading', { name: /same title/i }),
     ).toBeInTheDocument();
   });
+
+  it('should render with white background and black color if the theme is primary', () => {
+    render(<ContentBox title="Same title" />);
+
+    expect(screen.getByTestId('content-box-container')).toHaveStyle({
+      background: '#fff',
+      color: '#222',
+    });
+  });
+
+  it('should render with black background and white color if the theme is secondary', () => {
+    render(<ContentBox title="Same title" theme="secondary" />);
+
+    expect(screen.getByTestId('content-box-container')).toHaveStyle({
+      background: '#222',
+      color: '#ddd',
+    });
+  });
 });
