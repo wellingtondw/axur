@@ -28,7 +28,7 @@ const Home: React.FC = () => {
         </S.Wrapper>
       </S.HeaderContainer>
       <S.MainContainer>
-        <ContentBox title="Termos cadastrados" style={{ maxWidth: 310 }}>
+        <S.PrimaryContentBox title="Termos cadastrados">
           <S.WrapperItems>
             <LinkItem text="asddsad" />
             <LinkItem text="asddsad" />
@@ -46,11 +46,37 @@ const Home: React.FC = () => {
             <LinkItem text="asddsad" />
             <LinkItem text="asddsad" />
           </S.WrapperItems>
-        </ContentBox>
-        <S.ContentBox title="Lorem #30vbllyb" theme="secondary">
-          <LinkItem text="asddsad" theme="secondary" />
-          <LinkItem text="asddsad" theme="secondary" />
-        </S.ContentBox>
+        </S.PrimaryContentBox>
+        <S.SecondaryContentBox title="Lorem #30vbllyb" theme="secondary">
+          <S.ContentContainer>
+            <S.Title>Status</S.Title>
+            <S.Status>Concluído</S.Status>
+
+            <S.Title>Lista de URLs com o termo cadastrado</S.Title>
+            <S.LinkContainer>
+              <S.Link text="http://localhost:3000/" theme="secondary" />
+              <S.Link text="http://localhost:3000/" theme="secondary" />
+              <S.Link text="http://localhost:3000/" theme="secondary" />
+              <S.Link text="http://localhost:3000/" theme="secondary" />
+              <S.Link text="http://localhost:3000/" theme="secondary" />
+              <S.Link text="http://localhost:3000/" theme="secondary" />
+              <S.Link text="http://localhost:3000/" theme="secondary" />
+              <S.Link text="http://localhost:3000/" theme="secondary" />
+              <S.Link text="http://localhost:3000/" theme="secondary" />
+              <S.Link text="http://localhost:3000/" theme="secondary" />
+              <S.Link text="http://localhost:3000/" theme="secondary" />
+              <S.Link text="http://localhost:3000/" theme="secondary" />
+              <S.Link text="http://localhost:3000/" theme="secondary" />
+              <S.Link text="http://localhost:3000/" theme="secondary" />
+              <S.Link text="http://localhost:3000/" theme="secondary" />
+              <S.Link text="http://localhost:3000/" theme="secondary" />
+              <S.Link text="http://localhost:3000/" theme="secondary" />
+              <S.Link text="http://localhost:3000/" theme="secondary" />
+              <S.Link text="http://localhost:3000/" theme="secondary" />
+              <S.Link text="http://localhost:3000/" theme="secondary" />
+            </S.LinkContainer>
+          </S.ContentContainer>
+        </S.SecondaryContentBox>
       </S.MainContainer>
     </S.Container>
   );

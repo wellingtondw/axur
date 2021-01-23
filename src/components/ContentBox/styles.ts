@@ -29,10 +29,22 @@ export const Container = styled.div<StylesProps>`
       display: none;
     }
   `}
+
+  @media only screen and (max-width: 768px) {
+    max-width: 80%;
+  }
+
+  @media only screen and (max-width: 480px) {
+    max-width: 90%;
+  }
 `;
 
 export const Title = styled.h2<StylesProps>`
   font-size: 20px;
   font-weight: bold;
   margin: 16px 0 32px 16px;
+
+  @media only screen and (max-width: 768px) {
+    text-align: center;
+  }
 `;

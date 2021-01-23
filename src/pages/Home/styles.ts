@@ -2,6 +2,7 @@ import styled from 'styled-components';
 
 import Btn from '../../components/Button';
 import CtBox from '../../components/ContentBox';
+import LkItem from '../../components/LinkItem';
 
 export const Container = styled.div`
   display: flex;
@@ -58,6 +59,24 @@ export const MainContainer = styled.div`
   margin-top: 40px;
   display: flex;
   align-items: center;
+
+  @media only screen and (max-width: 768px) {
+    flex-direction: column;
+  }
+`;
+
+export const PrimaryContentBox = styled(CtBox)`
+  max-width: 310px;
+  margin-left: 16px;
+
+  @media only screen and (max-width: 768px) {
+    max-width: 80%;
+    margin: 0;
+  }
+
+  @media only screen and (max-width: 480px) {
+    max-width: 90%;
+  }
 `;
 
 export const WrapperItems = styled.div`
@@ -68,6 +87,42 @@ export const WrapperItems = styled.div`
   }
 `;
 
-export const ContentBox = styled(CtBox)`
-  margin-left: 40px;
+export const SecondaryContentBox = styled(CtBox)`
+  margin: 0 16px 0 40px;
+  padding-bottom: 32px;
+
+  @media only screen and (max-width: 768px) {
+    margin: 16px 0;
+  }
+`;
+
+export const ContentContainer = styled.div`
+  margin-left: 16px;
+`;
+
+export const Title = styled.h2`
+  font-size: 20px;
+  color: #ddd;
+  margin-bottom: 16px;
+`;
+
+export const Status = styled.p`
+  font-size: 12px;
+  color: #ddd;
+  margin-bottom: 40px;
+  margin-left: 8px;
+`;
+
+export const LinkContainer = styled.div`
+  width: 100%;
+  max-width: 60%;
+  flex-wrap: wrap;
+  display: flex;
+`;
+
+export const Link = styled(LkItem)`
+  width: auto;
+  padding: 0;
+  margin: 8px;
+  height: 20px;
 `;

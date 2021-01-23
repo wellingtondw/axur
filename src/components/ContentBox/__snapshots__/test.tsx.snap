@@ -21,6 +21,24 @@ exports[`<ContentBox /> should render correctly in the document 1`] = `
   margin: 16px 0 32px 16px;
 }
 
+@media only screen and (max-width:768px) {
+  .c0 {
+    max-width: 80%;
+  }
+}
+
+@media only screen and (max-width:480px) {
+  .c0 {
+    max-width: 90%;
+  }
+}
+
+@media only screen and (max-width:768px) {
+  .c1 {
+    text-align: center;
+  }
+}
+
 <div
   class="c0"
   data-testid="content-box-container"
