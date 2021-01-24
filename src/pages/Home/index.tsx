@@ -36,9 +36,8 @@ const Home: React.FC = () => {
 
   const handleSaveTerm = useCallback(async () => {
     const { data } = await api.post('/crawl', { keyword: inputValue });
-
-    const list = localStorage.getItem('@axur:registered-terms');
     const { id } = data;
+    const list = localStorage.getItem('@axur:registered-terms');
     const newList = list
       ? JSON.stringify([...JSON.parse(list), { id, text: inputValue }])
       : JSON.stringify([{ id, text: inputValue }]);
@@ -60,7 +59,9 @@ const Home: React.FC = () => {
       case 'done':
         statusText = 'Concluído';
         break;
-
+      case 'active':
+        statusText = 'Em andamento';
+        break;
       default:
         statusText = '';
         break;
@@ -68,6 +69,11 @@ const Home: React.FC = () => {
 
     return <S.Status>{statusText}</S.Status>;
   }, []);
+
+  const { status, id: urlTermsId, urls } = urlTermsList;
+  const hasRegisteredItems = termsList.length > 0;
+  const termHasUrls = urls.length > 0;
+  const noUrlFoundForTerm = urls.length < 1 && urlTermsId;
 
   return (
     <S.Container>
@@ -89,7 +95,7 @@ const Home: React.FC = () => {
       <S.MainContainer>
         <S.PrimaryContentBox
           title={
-            termsList.length > 0
+            hasRegisteredItems
               ? 'Termos cadastrados'
               : 'Nenhum termo cadastrado'
           }
@@ -109,29 +115,36 @@ const Home: React.FC = () => {
           </S.WrapperItems>
         </S.PrimaryContentBox>
         <S.SecondaryContentBox
-          title={
-            urlTermsList?.id
-              ? urlTermsList.id
-              : 'Selecione um item cadastrado anteriormente.'
-          }
+          title={urlTermsId || 'Selecione um item cadastrado anteriormente.'}
           theme="secondary"
         >
           <S.ContentContainer>
-            <S.Title>Status</S.Title>
-            {urlTermsList && handleStatusText(urlTermsList.status)}
+            {status && (
+              <>
+                <S.Title>Status</S.Title>
+                {handleStatusText(status)}
+              </>
+            )}
 
-            <S.Title>Lista de URLs com o termo cadastrado</S.Title>
-            <S.LinkContainer>
-              {urlTermsList.urls.map(url => (
-                <S.Link
-                  key={url}
-                  text={url}
-                  theme="secondary"
-                  href={url}
-                  target="_blank"
-                />
-              ))}
-            </S.LinkContainer>
+            {termHasUrls && (
+              <>
+                <S.Title>Lista de URLs com o termo cadastrado</S.Title>
+                <S.LinkContainer>
+                  {urls.map(url => (
+                    <S.Link
+                      key={url}
+                      text={url}
+                      theme="secondary"
+                      href={url}
+                      target="_blank"
+                    />
+                  ))}
+                </S.LinkContainer>
+              </>
+            )}
+            {noUrlFoundForTerm && (
+              <S.Title>Nenhuma URL encontrada para esse termo</S.Title>
+            )}
           </S.ContentContainer>
         </S.SecondaryContentBox>
       </S.MainContainer>
