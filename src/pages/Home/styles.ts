@@ -115,14 +115,10 @@ export const Status = styled.p`
 
 export const LinkContainer = styled.div`
   width: 100%;
-  max-width: 60%;
   flex-wrap: wrap;
   display: flex;
 `;
 
 export const Link = styled(LkItem)`
-  width: auto;
-  padding: 0;
-  margin: 8px;
-  height: 20px;
+  padding: 0 8px;
 `;

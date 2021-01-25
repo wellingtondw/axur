@@ -1,0 +1,341 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<HomePage /> should render correctly in the document 1`] = `
+.c7 {
+  border: none;
+  background: #ff5824;
+  color: #fff;
+  padding: 8px 16px;
+  border-radius: 4px;
+  -webkit-transition: background-color linear 0.2s;
+  transition: background-color linear 0.2s;
+}
+
+.c7:hover {
+  background: #ff6333;
+}
+
+.c10 {
+  width: 100%;
+  border: 1px solid #ddd;
+  height: 374px;
+  overflow-y: auto;
+  border-radius: 4px;
+  background: #fff;
+  color: #222;
+}
+
+.c10::-webkit-scrollbar {
+  display: none;
+}
+
+.c14 {
+  width: 100%;
+  border: 1px solid #ddd;
+  height: 374px;
+  overflow-y: auto;
+  border-radius: 4px;
+  background: #222;
+  color: #ddd;
+}
+
+.c14::-webkit-scrollbar {
+  display: none;
+}
+
+.c12 {
+  font-size: 20px;
+  font-weight: bold;
+  margin: 16px 0 32px 16px;
+  text-transform: capitalize;
+}
+
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c1 {
+  width: 100%;
+  background-color: #222;
+  height: 288px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  padding: 0 16px;
+}
+
+.c2 {
+  font-size: 40px;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.c3 {
+  font-size: 20px;
+  margin-bottom: 32px;
+  text-align: center;
+}
+
+.c4 {
+  width: 100%;
+  max-width: 1288px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.c8 {
+  margin-left: 16px;
+}
+
+.c9 {
+  width: 100%;
+  max-width: 1280px;
+  margin-top: 40px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c11 {
+  max-width: 310px;
+  margin-left: 16px;
+}
+
+.c13 {
+  width: 100%;
+}
+
+.c13 a:last-of-type {
+  border: none;
+}
+
+.c15 {
+  margin: 0 16px 0 40px;
+  padding-bottom: 32px;
+}
+
+.c16 {
+  margin-left: 16px;
+}
+
+.c5 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  border-bottom: 1px solid #ddd;
+  width: 100%;
+}
+
+.c6 {
+  width: 100%;
+  border: 0;
+  background-color: transparent;
+  outline: 0;
+  padding: 8px 8px 8px 0;
+  font-size: 12px;
+  color: #fff;
+}
+
+.c6::-webkit-input-placeholder {
+  color: #ddd;
+}
+
+.c6::-moz-placeholder {
+  color: #ddd;
+}
+
+.c6:-ms-input-placeholder {
+  color: #ddd;
+}
+
+.c6::placeholder {
+  color: #ddd;
+}
+
+@media only screen and (max-width:768px) {
+  .c10 {
+    max-width: 80%;
+  }
+}
+
+@media only screen and (max-width:480px) {
+  .c10 {
+    max-width: 90%;
+  }
+}
+
+@media only screen and (max-width:768px) {
+  .c14 {
+    max-width: 80%;
+  }
+}
+
+@media only screen and (max-width:480px) {
+  .c14 {
+    max-width: 90%;
+  }
+}
+
+@media only screen and (max-width:768px) {
+  .c12 {
+    text-align: center;
+  }
+}
+
+@media only screen and (max-width:768px) {
+  .c4 {
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+}
+
+@media only screen and (max-width:768px) {
+  .c8 {
+    margin: 16px 0 0 0;
+  }
+}
+
+@media only screen and (max-width:768px) {
+  .c9 {
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+}
+
+@media only screen and (max-width:768px) {
+  .c11 {
+    max-width: 80%;
+    margin: 0;
+  }
+}
+
+@media only screen and (max-width:480px) {
+  .c11 {
+    max-width: 90%;
+  }
+}
+
+@media only screen and (max-width:768px) {
+  .c15 {
+    margin: 16px 0;
+  }
+}
+
+<div
+  class="c0"
+>
+  <div
+    class="c1"
+  >
+    <p
+      class="c2"
+    >
+      Axur
+    </p>
+    <p
+      class="c3"
+    >
+      Ferramenta para automação de busca
+    </p>
+    <div
+      class="c4"
+    >
+      <div
+        class="c5"
+        data-testid="input-container"
+        style="max-width: 460px;"
+      >
+        <input
+          class="c6"
+          placeholder="Digite o termo para ser inspecionado"
+          value=""
+        />
+      </div>
+      <button
+        class="c7 c8"
+        title="Cadastrar novo termo"
+      >
+        Cadastrar
+      </button>
+    </div>
+  </div>
+  <div
+    class="c9"
+  >
+    <div
+      class="c10 c11"
+      data-testid="content-box-container"
+    >
+      <h2
+        class="c12"
+      >
+        Nenhum termo cadastrado
+      </h2>
+      <div
+        class="c13"
+        data-testid="terms-list"
+      />
+    </div>
+    <div
+      class="c14 c15"
+      data-testid="content-box-container"
+    >
+      <h2
+        class="c12"
+      >
+        Selecione um item cadastrado anteriormente.
+      </h2>
+      <div
+        class="c16"
+        data-testid="home-content-container"
+      >
+        
+        
+      </div>
+    </div>
+  </div>
+</div>
+`;

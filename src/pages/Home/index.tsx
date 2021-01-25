@@ -63,7 +63,7 @@ const Home: React.FC = () => {
         statusText = 'Em andamento';
         break;
       default:
-        statusText = '';
+        statusText = 'Erro';
         break;
     }
 
@@ -74,6 +74,8 @@ const Home: React.FC = () => {
   const hasRegisteredItems = termsList.length > 0;
   const termHasUrls = urls.length > 0;
   const noUrlFoundForTerm = urls.length < 1 && urlTermsId;
+  const currentTerm = termsList.find(term => term.id === urlTermsId);
+  const termWithNameAndId = `${currentTerm?.text} - ${currentTerm?.id}`;
 
   return (
     <S.Container>
@@ -100,7 +102,7 @@ const Home: React.FC = () => {
               : 'Nenhum termo cadastrado'
           }
         >
-          <S.WrapperItems>
+          <S.WrapperItems data-testid="terms-list">
             {termsList.map(term => {
               const { text, id } = term;
 
@@ -115,13 +117,17 @@ const Home: React.FC = () => {
           </S.WrapperItems>
         </S.PrimaryContentBox>
         <S.SecondaryContentBox
-          title={urlTermsId || 'Selecione um item cadastrado anteriormente.'}
+          title={
+            currentTerm
+              ? termWithNameAndId
+              : 'Selecione um item cadastrado anteriormente.'
+          }
           theme="secondary"
         >
-          <S.ContentContainer>
+          <S.ContentContainer data-testid="home-content-container">
             {status && (
               <>
-                <S.Title>Status</S.Title>
+                <S.Title data-testid="status">Status</S.Title>
                 {handleStatusText(status)}
               </>
             )}

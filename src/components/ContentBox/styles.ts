@@ -43,6 +43,7 @@ export const Title = styled.h2<StylesProps>`
   font-size: 20px;
   font-weight: bold;
   margin: 16px 0 32px 16px;
+  text-transform: capitalize;
 
   @media only screen and (max-width: 768px) {
     text-align: center;
