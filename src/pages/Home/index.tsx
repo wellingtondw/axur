@@ -35,21 +35,29 @@ const Home: React.FC = () => {
   }, []);
 
   const handleSaveTerm = useCallback(async () => {
-    const { data } = await api.post('/crawl', { keyword: inputValue });
-    const { id } = data;
-    const list = localStorage.getItem('@axur:registered-terms');
-    const newList = list
-      ? JSON.stringify([...JSON.parse(list), { id, text: inputValue }])
-      : JSON.stringify([{ id, text: inputValue }]);
+    try {
+      const { data } = await api.post('/crawl', { keyword: inputValue });
+      const { id } = data;
+      const list = localStorage.getItem('@axur:registered-terms');
+      const newList = list
+        ? JSON.stringify([...JSON.parse(list), { id, text: inputValue }])
+        : JSON.stringify([{ id, text: inputValue }]);
 
-    localStorage.setItem('@axur:registered-terms', newList);
-    setTermsList([...JSON.parse(newList)]);
-    setInputValue('');
+      localStorage.setItem('@axur:registered-terms', newList);
+      setTermsList([...JSON.parse(newList)]);
+      setInputValue('');
+    } catch (err) {
+      window.alert('Ocorreu um erro, tento novamente.');
+    }
   }, [inputValue]);
 
   const handleGetTermUrl = useCallback(async id => {
-    const { data } = await api.get(`crawl/${id}`);
-    setUrlTermsList(data);
+    try {
+      const { data } = await api.get(`crawl/${id}`);
+      setUrlTermsList(data);
+    } catch (err) {
+      window.alert('Ocorreu um erro, tento novamente.');
+    }
   }, []);
 
   const handleStatusText = useCallback(status => {
